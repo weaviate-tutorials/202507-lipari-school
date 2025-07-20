@@ -42,7 +42,7 @@
 
   "initializeCommand": "mkdir -p .devcontainer/scripts",
 
-  "postStartCommand": "bash .devcontainer/scripts/setup-venv.sh",
+  "postStartCommand": "bash .devcontainer/scripts/setup-venv.sh && cp .env.example .env",
 
   "containerEnv": {
     "WORKSPACE_FOLDER": "/workspaces/${localWorkspaceFolderBasename}"

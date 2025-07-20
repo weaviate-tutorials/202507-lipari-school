@@ -24,10 +24,8 @@
 
 ### Step 2: Configure Your Environment
 
-1. Copy the example environment file:
-   ```bash
-   cp .env.example .env
-   ```
+1. The CodeSpace set up will have created a `.env` file created for you
+   (If not, create it with `cp .env.example .env`.)
 
 2. Edit the `.env` file with your Weaviate Cloud details:
    ```env
