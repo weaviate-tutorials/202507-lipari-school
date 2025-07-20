@@ -16,10 +16,8 @@
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-  // Add a feature to make docker-in-docker available
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
+  // Removed docker-in-docker feature since we're using cloud Weaviate
+  "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -36,12 +34,11 @@
         "ms-python.black-formatter",
         "ms-python.python",
         "ms-toolsai.jupyter",
-        "ms-azuretools.vscode-docker"  // Added Docker extension
       ]
     }
   },
 
-  "postCreateCommand": "pip install --no-cache-dir uv && uv venv && uv pip install -r requirements.txt && if [ -f run-weaviate.sh ]; then chmod +x run-weaviate.sh; fi",
+  "postCreateCommand": "pip install --no-cache-dir uv && uv venv && uv pip install -r requirements.txt",
 
   "initializeCommand": "mkdir -p .devcontainer/scripts",
 

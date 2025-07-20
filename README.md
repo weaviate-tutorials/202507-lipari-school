@@ -1,48 +1,34 @@
-# Weaviate Devcontainer Template
+# Lipari school: A deep dive into Weaviate
 
-This is a template for creating a Weaviate devcontainer / Codespace, with Docker containers.
+## Student prerequisites
 
-## How to run
+- A GitHub account (sign up [here](https://github.com/signup))
+- A Weaviate Cloud account (sign up [here](https://console.weaviate.cloud/))
 
-Option 1: Devcontainer
-Option 2: Github Codespaces
-
-### Option 1: Devcontainer
-
-1. Install Docker
-2. Install VSCode
-3. Install Devcontainer extension
-4. Open this repository in VSCode
-5. Open the command palette (Ctrl/Cmd+Shift+P), and select "Dev Containers: Rebuild and Reopen in Container"
-6. Wait for the container to build and start
-
-### Option 2: Github Codespaces
+### Github Codespaces
 
 1. Click on the green "Code" button in the top right corner of the repository
 2. Select "Open with Codespaces"
 3. Click on "New codespace"
 4. Wait for the codespace to build and start
 
-## How to run Weaviate
+## Setting up Weaviate Cloud
 
-### Option 1: Docker (in devcontainer)
+### Step 1: Create a Weaviate Cloud Instance
 
-1. Open a terminal (in the devcontainer or codespace)
-2. Run the following command to start Weaviate:
+1. Go to the [Weaviate Cloud Console](https://console.weaviate.cloud/) and create a new Weaviate instance
+2. The Sandbox tier is free and perfect for learning
+3. Once your instance is created, note down the URL and API key
+
+### Step 2: Configure Your Environment
+
+1. Copy the example environment file:
    ```bash
-   ./run-weaviate.sh start
+   cp .env.example .env
    ```
-3. Wait for Weaviate to start (it will show a message on the terminal when finished)
 
-### Option 2: Weaviate Cloud
-
-1. Go to the [Weaviate Cloud Console](https://console.weaviate.cloud/) and create a new Weaviate instance (e.g. the Sandbox is free)
-2. Once the instance is created, click on it to open the instance details
-3. Connect to it using the Weaviate client using those details.
-
-## Usage
-
-1. (Optional) If you need to pass any API keys, create a `.env` file in the root of the repository with the required key and value pairs:
+2. Edit the `.env` file with your Weaviate Cloud details:
    ```env
-   COHERE_API_KEY=your_core_api_key
+   WEAVIATE_URL=https://your-cluster-name.weaviate.network
+   WEAVIATE_API_KEY=your-api-key-here
    ```
