@@ -12,6 +12,8 @@
 3. Click on "New codespace"
 4. Wait for the codespace to build and start
 
+> Note: This should have set up a Python environment, and activated it for you
+
 ## Setting up Weaviate Cloud
 
 ### Step 1: Create a Weaviate Cloud Instance
@@ -29,6 +31,17 @@
 
 2. Edit the `.env` file with your Weaviate Cloud details:
    ```env
-   WEAVIATE_URL=https://your-cluster-name.weaviate.network
+   # Your Weaviate Cloud instance URL
+   # Example: d4vzkuatq9cfkil33yifwq.c0.europe-west3.gcp.weaviate.cloud
+   WEAVIATE_URL=your-cluster-url-here
+
+   # Your Weaviate Cloud API key
+   # Create an "admin" key and get it from your Weaviate Cloud Console
    WEAVIATE_API_KEY=your-api-key-here
    ```
+
+### Check that you can run scripts & run
+
+```shell
+python try_this.py
+```
