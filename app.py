@@ -49,16 +49,20 @@ if st.button("Search"):
             b64_img = o.properties["page_image"]
             filename = o.properties.get("filename", "")
             doc_title = o.properties.get("document_title", "")
-            href = f"data:image/jpeg;base64,{b64_img}"
+            # Show small preview in the column
+            img_bytes = base64.b64decode(b64_img)
             with col:
                 st.markdown(f"**{filename}**<br/>{doc_title}", unsafe_allow_html=True)
-                st.markdown(
-                    f'<a href="{href}" target="_blank">'
-                    f'<img src="{href}" width="200" style="margin:5px;border:1px solid #ccc;"/><br>'
-                    f'<span style="font-size:0.9em;">Click to enlarge</span>'
-                    '</a>',
-                    unsafe_allow_html=True
-                )
+                st.image(img_bytes, width=120)
+
+    # Show expanders for enlarged images below the grid
+    for o in objects:
+        b64_img = o.properties["page_image"]
+        filename = o.properties.get("filename", "")
+        doc_title = o.properties.get("document_title", "")
+        img_bytes = base64.b64decode(b64_img)
+        with st.expander(f"{filename} - {doc_title} (Click to enlarge)"):
+            st.image(img_bytes, caption=doc_title, use_container_width=True)
 
     # --- Stage 2: Generation (background) ---
     with st.spinner("Generating answer..."):
