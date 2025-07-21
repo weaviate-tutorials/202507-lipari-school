@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: python:3.10
+    image: python:3.10-bullseye
     volumes:
       - ..:/workspaces/${localWorkspaceFolderBasename}:cached
     command: sleep infinity
