@@ -12,7 +12,10 @@
 3. Click on "New codespace"
 4. Wait for the codespace to build and start
 
-> Note: This should have set up a Python environment, and activated it for you
+> Note: This should have set up a Python environment, and activated it for you.
+>
+> If the line you see in the shell does NOT start with `(202507-lipari-school)`,
+> make sure the setup is finished (wait a few more minutes) or try opening a new shell.
 
 ## Setting up Weaviate Cloud
 
