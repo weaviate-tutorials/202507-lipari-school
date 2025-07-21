@@ -19,6 +19,7 @@ dependencies = [
     { name = "pdf2image" },
     { name = "python-dotenv" },
     { name = "streamlit" },
+    { name = "tqdm" },
     { name = "weaviate-client" },
 ]
 
@@ -30,6 +31,7 @@ requires-dist = [
     { name = "pdf2image", specifier = ">=1.17.0" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "streamlit", specifier = ">=1.47.0" },
+    { name = "tqdm", specifier = ">=4.67.1" },
     { name = "weaviate-client", specifier = ">=4.16.1" },
 ]
 
