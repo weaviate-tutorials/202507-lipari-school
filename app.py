@@ -25,7 +25,7 @@ client = get_weaviate_client()
 pages = client.collections.get("Pages")
 
 # --- Streamlit UI ---
-st.title("PDF RAG Demo")
+st.title("Multimodal RAG")
 
 query = st.text_input("Ask a question about the document:", value="Latest developments in retrieval augmented generation")
 top_k = st.number_input("Number of results", min_value=1, max_value=10, value=3)
