@@ -2,8 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: python:3.11-slim-bullseye
+    image: python:3.10
     volumes:
       - ..:/workspaces/${localWorkspaceFolderBasename}:cached
     command: sleep infinity
-    # Removed weaviate-network dependency since we're using cloud Weaviate
