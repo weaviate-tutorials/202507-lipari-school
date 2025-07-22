@@ -1,4 +1,5 @@
 data/imgs
+data/parsed
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
