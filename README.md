@@ -1,5 +1,7 @@
 # Lipari school: A deep dive into Weaviate - example notebooks
 
+GitHub repository: https://github.com/weaviate-tutorials/202507-lipari-school
+
 ## Resources
 
 - A GitHub account (sign up [here](https://github.com/signup))
